@@ -1,0 +1,7 @@
+Статьи для изучения , помеченное отмечаем
+
+https://learn.javascript.ru/event-delegation  -  делегирование событий 
+https://habr.com/ru/post/512782/  -  делегирование событий 
+https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing  -  схлопывание отступов 
+https://htmlacademy.ru/blog/education/what/react-developer  - что нужно уметь фронтенд разработчику
+https://htmlacademy.ru/blog/education/learning/notes-taking  -  как правильно вести конспекты 
