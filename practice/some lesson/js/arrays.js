@@ -47,4 +47,42 @@ arr.forEach(function (item, i, arr) {
     console.log(`${i}: ${item} внутри массива ${arr}`);
 });
 
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
 
+newArray[1] = 'dfqwdqwdqwd';
+console.log(oldArray);
+console.log(newArray);
+
+const video = ['youtube', 'vimeo', 'rutube'],
+        blogs = ['wordpress', 'blogger', 'livejournal' ],
+        internet = [...video, ...blogs, 'vk', 'facebook'];
+console.log(video);
+console.log(blogs);
+console.log(internet);
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+const num = [2, 5, 7];
+log(...num);
+
+const array = ['a', 'b'];
+const newArr = [...array];
+
+const q = {
+    one: 1,
+    two: 2,
+    three: {
+        four: 4,
+        five: 5
+    }
+};
+
+const newObj = {...q};
+newObj.three.four = 99;
+console.log(q);
+console.log(newObj);
