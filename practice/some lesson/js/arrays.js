@@ -4,7 +4,7 @@ const arr = [1, 22, 13, 2, 8];
 arr.sort(compareNum);
 
 function compareNum(a, b) {
-    return a- b;
+    return a - b;
 }
 console.log(arr);
 
@@ -28,7 +28,7 @@ console.log(arr);
 
 
 //* узнаем количество элементов в массива (работает по принципу: index + 1)
-console.log(arr.length); 
+console.log(arr.length);
 
 //* перебор значений массива с помощью обычного цикла for 
 for (let i = 0; i < arr.length; i++) {
