@@ -42,6 +42,43 @@ console.log(w);
 console.log(h);
 console.log(title);
 
+function copy(mainObj) {
+    let objCopy = {};
+    let key;
+    for (key in mainObj) {
+        objCopy [key] = mainObj [key];
+    }
+    return objCopy;
+}
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+
+const newNumbers = copy(numbers);
+newNumbers.a = 10;
+newNumbers.c.x = 10;
+console.log(newNumbers);
+console.log(numbers);
+
+const add = {
+    d: 17,
+    e: 20
+};
+//* создаем новый объект складывая вабранные (изменения только поверхностно можно
+//* сделать, объет внутри объекта изменить таким способом не удастся)
+const clone = Object.assign({}, add, numbers);
+clone.d = 20;
+clone.c.x = 55;
+console.log(add);
+console.log(clone);
+
+
 //todo ******* Таски из https://learn.javascript.ru/object#the-for-in-loop ******
 
 //* Task 1!
