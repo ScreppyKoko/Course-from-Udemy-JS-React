@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie DB</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header__search">
@@ -23,10 +26,15 @@
             <nav class="promo__menu-list">
                 <ul>
                     <li><a class="promo__menu-item promo__menu-item_active" href="#">Фильмы</a></li>
-                    <li><a class="promo__menu-item" href="#">Сериалы</a></li>
-                    <li><a class="promo__menu-item" href="#">Мультфильмы</a></li>
+                    <li><a class="promo__menu-item" href="https://www.patreon.com/freelancerlifestyle/posts"
+                            target='_blank'>Сериалы</a>
+                    </li>
+                    <li data-current="1"><a class="promo__menu-item" href="#">Мультфильмы</a></li>
                     <li><a class="promo__menu-item" href="#">Клипы</a></li>
                     <li><a class="promo__menu-item" href="#">Трейлеры</a></li>
+                    <li><a class="promo__menu-item" href="https://www.patreon.com/freelancerlifestyle/posts"
+                            target='_blank'>FLS</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -69,7 +77,7 @@
                         <span>Сделать его любимым?</span>
                         <input type="checkbox">
                         <span class="yes">Да!</span>
-                        <button>Подтвердить</button>
+                        <button onclick="alert(`click`)">Подтвердить</button>
                     </form>
                 </div>
             </div>
@@ -83,5 +91,8 @@
     </main>
 
     <script src="js/script.js"></script>
+    <!-- <script src="js/navigation in DOM, data-atrutes.js"></script> -->
+    <!-- <script src="js/eventsAndHandlers.js"></script> -->
 </body>
+
 </html>
