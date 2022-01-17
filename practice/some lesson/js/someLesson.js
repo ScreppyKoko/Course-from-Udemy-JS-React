@@ -235,3 +235,5 @@ const personalMovieDB = {
       });
    },
 };
+
+console.log(+'infinity');

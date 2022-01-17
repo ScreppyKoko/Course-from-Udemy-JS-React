@@ -19,6 +19,7 @@ https://medium.com/@stasonmars/%D0%BA%D0%BE%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%
 
 вёрстка:
 https://template.fls.guru/template-docs  -  шаблон фрилансера
+https://learn.javascript.ru/css-selectors - селекторы
 https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing  -  схлопывание отступов 
 https://htmlacademy.ru/blog/boost/frontend/image-formats  -  Форматы изображений для веба
 https://medium.com/web-standards/toggle-buttons-a41388e80974#2347  -  Инклюзивные компоненты: переключатели
