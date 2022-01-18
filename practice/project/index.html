@@ -33,7 +33,7 @@
                     <li><a class="promo__menu-item" href="#">Клипы</a></li>
                     <li><a class="promo__menu-item" href="#">Трейлеры</a></li>
                     <li><a class="promo__menu-item" href="https://www.patreon.com/freelancerlifestyle/posts"
-                            target='_blank'>FLS</a>
+                            target='_blank' onclick="alert(`click (тестил использование слушателя в HTML разметке)`)">FLS</a>
                     </li>
                 </ul>
             </nav>
@@ -75,9 +75,9 @@
                         <span>Введите название фильма</span>
                         <input class="adding__input" type="text" placeholder="Что уже посмотрено...?">
                         <span>Сделать его любимым?</span>
-                        <input type="checkbox">
+                        <input class="checkbox" type="checkbox">
                         <span class="yes">Да!</span>
-                        <button onclick="alert(`click`)">Подтвердить</button>
+                        <button class="confirm-button">Подтвердить</button>
                     </form>
                 </div>
             </div>
@@ -90,7 +90,7 @@
         </div>
     </main>
 
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
     <!-- <script src="js/navigation in DOM, data-atrutes.js"></script> -->
     <!-- <script src="js/eventsAndHandlers.js"></script> -->
 </body>
