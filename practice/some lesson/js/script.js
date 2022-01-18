@@ -39,4 +39,3 @@ wrapper.append(par); //! не получилось!!!
 
 button[2].replaceWith(circles[0]); //* меняем элемент на странице
 
-
