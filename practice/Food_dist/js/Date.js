@@ -1,7 +1,7 @@
 'use strict';
 //! рабочий код для страницы 
 
-const deadLine = '2022-01-21';
+const deadLine = '2022-01-30';
 
 function getTimeRamaining(endtime) {
     const time = Date.parse(endtime) - Date.parse(new Date()),
@@ -18,8 +18,8 @@ function getTimeRamaining(endtime) {
     };
 }
 
-function getZero (num) {
-    if (num >= 0 && num < 10)     {
+function getZero(num) {
+    if (num >= 0 && num < 10) {
         return `0${num}`;
     } else {
         return num;
@@ -34,7 +34,7 @@ function setClock(selector, endtime) {
         seconds = timer.querySelector('#seconds'),
         timeInterval = setInterval(updateClock, 1000);
 
-        updateClock();
+    updateClock();
 
     function updateClock() {
         const time = getTimeRamaining(endtime);
@@ -46,7 +46,7 @@ function setClock(selector, endtime) {
             clearInterval(timeInterval);
         }
     }
-    
+
 }
 
 setClock('.timer', deadLine);

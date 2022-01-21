@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/payables.css">
+   <title>Выплаты</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <main class="payables">
+         <p>Инфо по выплатам:</p>
+         <ol class="payables__list">
+         </ol>
+         <hr>
+         <form class="payables__form" action="" method="post">
+            <div class="payables__date payables__element">
+               <label class="payables__label " for="date">Дата</label><br>
+               <input class="payables__date-input payables__element" type="date" name="date" required>
+            </div>
+            <div class="payables__sum payables__element">
+               <label class="payables__label" for="sum">Сумма</label><br>
+               <input class="payables__sum-input" type="number" name="sum" placeholder="Введите сумму в руб." required>
+            </div>
+            <div class="payables__result payables__element">
+               <label class="payables__label" for="result"></label><br>
+               <input class="payables__result-input" type="submit" name="result">
+            </div>
+      </main>
+      </form>
+      <hr>
+      <p>Начислено на текущий момент <span class="payables__result-sum"></span></p>
+   </div>
+   <script defer src="js/payables.js"></script>
+</body>
+
+</html>
