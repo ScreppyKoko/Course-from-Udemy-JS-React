@@ -80,3 +80,21 @@ button {
     margin-top: 30px;
     color: #fff;
 }
+
+.box-window {
+    box-sizing: border-box;
+    width: 400px;
+    height: 350px;
+    overflow: scroll;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.btn-window {
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
