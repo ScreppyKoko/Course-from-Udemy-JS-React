@@ -90,4 +90,3 @@ payablesForm.addEventListener('submit', (event) => {
    myStorage.setItem('map', JSON.stringify(map));
    createPayablesList();
 });
-

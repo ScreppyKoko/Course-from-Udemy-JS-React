@@ -30,49 +30,71 @@
 // };
 // obj.sum();
 
-function sayName () {
-    console.log(this);
-    console.log(this.name);
+// function sayName() {
+//     console.log(this);
+//     console.log(this.name);
+// }
+
+// const user = {
+//     name: 'John'
+// };
+
+
+// //* установили контекст
+// sayName.call(user, 'Smith');
+// sayName.apply(user, ['Smith']);
+
+// function count(num) {
+//     return this * num;
+// }
+
+// const double = count.bind(2);
+// console.log(double(3));
+// console.log(double(13));
+
+
+// //! *********** функция - конструктор ***********
+// function User(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.human = true;
+//     this.hello = function () {
+//         console.log(`Hello ${this.name}`);
+//     };
+// }
+
+// User.prototype.exit = function () {
+//     console.log(`Пользователь ${this.name} ушел!`);
+
+// };
+
+// const ivan = new User('Ivan', 28);
+// const alex = new User('Alex', 20);
+
+// ivan.hello();
+// alex.hello();
+
+// console.log(ivan);
+// console.log(alex);
+
+let qualificationDistance = 200;
+let attempts = [120, 150, 160, 201, 203, 180, 202];
+let qualified = false;
+let averageBest = 0;
+
+function getJumpValues() {
+    attempts.sort();
+    let averageJumps1 = attempts.length - 1;
+    let averageJumps2 = attempts.length - 2;
+    let averageJumps3 = attempts.length - 3;
+    averageBest = (attempts[averageJumps1] + attempts[averageJumps2] + attempts[averageJumps3]) / 3;
+    console.log('Среднее значение из трех удачных прыжков: ' + averageBest);
 }
+getJumpValues();
 
-const user = {
-    name: 'John'
-};
-
-
-//* установили контекст
-sayName.call(user, 'Smith');
-sayName.apply(user, ['Smith']);
-
-function count(num) {
-    return this*num;
+if (averageBest > qualificationDistance) {
+    qualified === false;
+} else {
+    qualified === true;
+    console.log(averageBest > qualificationDistance)
 }
-
-const double = count.bind(2);
-console.log(double(3));
-console.log(double(13));
-
-
-//! *********** функция - конструктор ***********
-function User(name, age) {
-    this.name = name;
-    this.age = age;
-    this.human = true;
-    this.hello = function () {
-        console.log(`Hello ${this.name}`);
-    };
-}
-
-User.prototype.exit = function () {
-    console.log(`Пользователь ${this.name} ушел!`);
-
-};
-
-const ivan = new User('Ivan', 28);
-const alex = new User('Alex', 20);
-
-ivan.hello();
-alex.hello();
-
-console.log(ivan);
-console.log(alex);
