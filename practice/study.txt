@@ -2,6 +2,9 @@
 Статьи для изучения , изученное отмечаем
  
 https://drive.google.com/file/d/1xXLFKnhETnMqI444sm4Jq1fpEcLQlnyb/view - небольшие тестики
+https://github.com/azat-io/you-dont-know-js-ru - литература по JS 
+https://github.com/fullstack-development/developers-roadmap/commit/3838c9376f88cd0da99b3c200066ba2d61725c40 - вопросы для собесов
+https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html - горячие клавиши VScode
 https://github.com/rolling-scopes-school/tasks/tree/master/stage0/modules/rs-school-intro - course from RS school
 https://github.com/rolling-scopes-school/tasks/tree/master/stage0 - course from RS school
 https://rs.school/js-stage0/ - course from RS school
