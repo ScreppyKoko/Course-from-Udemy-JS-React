@@ -6,7 +6,7 @@ class Rectangle {
       this.height = height;
       this.width = width;
    }
-   // создаем методы:
+   //* создаем методы:
    calcArea() {
       return this.height * this.width;
    }
@@ -14,11 +14,12 @@ class Rectangle {
 
 class ColoredRectangleWithText extends Rectangle {
    constructor(height, width, text, bgColor) {
-      super(height, width); //* должна быть на первом месте в наследуемом классе
+      // наследум от родителя class Rectangle с помощью метода super();
+      super(height, width); //* должна быть на первом месте в наследуемом классе. Выбираем, что именно наследовать внутри метода "super()"
       this.text = text;
       this.bgColor = bgColor;
    }
-
+   //* создаем методы:
    showMyProps() {
       console.log(`Текст: ${this.text}, цвет: ${this.bgColor}`);
    }
