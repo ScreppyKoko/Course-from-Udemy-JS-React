@@ -58,7 +58,7 @@ function f4() {
    const input = +document.querySelector('.i-4').value;
    const output = document.querySelector('.out-4');
 
-   if (input >= 18) {
+   if (input <= 2022 - 18) {
       output.textContent = 1;
    } else {
       output.textContent = 0;
@@ -76,7 +76,7 @@ function f5() {
    const output = document.querySelector('.out-5');
 
    if (input < 0) {
-      output.textContent = 'm;'
+      output.textContent = 'm';
    } else if (input === 0) {
       output.textContent = 0;
    } else {
