@@ -55,8 +55,8 @@ console.log(oldArray);
 console.log(newArray);
 
 const video = ['youtube', 'vimeo', 'rutube'],
-        blogs = ['wordpress', 'blogger', 'livejournal' ],
-        internet = [...video, ...blogs, 'vk', 'facebook'];
+    blogs = ['wordpress', 'blogger', 'livejournal'],
+    internet = [...video, ...blogs, 'vk', 'facebook'];
 console.log(video);
 console.log(blogs);
 console.log(internet);
@@ -67,6 +67,7 @@ function log(a, b, c) {
     console.log(c);
 }
 
+//! spread операторы
 const num = [2, 5, 7];
 log(...num);
 
@@ -82,7 +83,21 @@ const q = {
     }
 };
 
-const newObj = {...q};
+const newObj = { ...q };
 newObj.three.four = 99;
 console.log(q);
 console.log(newObj);
+
+//!  rest операторы 
+
+const log1 = function (a, b, ...rest)  {
+    console.log(a, b, rest);
+};
+
+log1('basic', 'rest', 'operator', 'usage');
+
+function caclOrDouble(number, basic = 2) {
+    console.log(number * basic);
+}
+
+caclOrDouble(3);

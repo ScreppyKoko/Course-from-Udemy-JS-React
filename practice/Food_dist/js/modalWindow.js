@@ -49,7 +49,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 //* открываем модальное окно через 20 секунд 
-const modalTimerId = setTimeout(openModal, 20000);
+// const modalTimerId = setTimeout(openModal, 20000);
 
 
 //* открываем модальное окно при скролле до конца
