@@ -29,12 +29,12 @@ document.querySelector('.b-1').onclick = t1;
 // <p>Решить задачу с помощью вложенных циклов. Внешний цикл выводит цифру и перенос строки br, внутренний - *_, и после этого внешний - знак переноса.</p>
 function t2() {
    let out = '';
-   for (let i = 0; i < 3; i++) {
-      out += `${i + 1} <br>`;
+   for (let i = 1; i <= 3; i++) {
+      out += i + '<br>';
       for (let j = 0; j < 3; j++) {
          out += '*_';
       }
-      out += '<br>'
+      out += '<br>';
    }
    document.querySelector('.out-2').innerHTML = out;
 }

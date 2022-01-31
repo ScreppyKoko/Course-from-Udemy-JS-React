@@ -6,7 +6,7 @@
 
 function t1() {
    let out = '';
-   for (let i = 0; i <= 16; i++) {
+   for (let i = 1; i <= 16; i++) {
       out += i + '_';
    }
    document.querySelector('.out-1').textContent = out;
@@ -216,9 +216,9 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
-   let divs12 = document.querySelectorAll('.div-12');
-   for (let i = 0; i < divs12.length; i++) {
-      divs12[i].style.backgroundColor = 'orange';
+   let elem = document.querySelectorAll('.div-12');
+   for (let i = 0; i < elem.length; i++) {
+      elem[i].style.backgroundColor = 'orange';
    }
 }
 
