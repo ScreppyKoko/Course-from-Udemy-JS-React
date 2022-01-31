@@ -57,8 +57,9 @@ document.querySelector('.b-3').onclick = f3;
 function f4() {
    const input = +document.querySelector('.i-4').value;
    const output = document.querySelector('.out-4');
+   const now = new Date().getFullYear();
 
-   if (input <= 2022 - 18) {
+   if (input <= now - 18) {
       output.textContent = 1;
    } else {
       output.textContent = 0;
