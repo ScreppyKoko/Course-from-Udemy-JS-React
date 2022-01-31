@@ -1,3 +1,4 @@
 Полезные для работы ссылки:
 
 валидатор для HTML кода: http://validator.w3.org/nu/
+создание css спрайтов: https://spritegen.website-performance.org/
