@@ -218,7 +218,7 @@ document.querySelector('.b-11').onclick = t11;
 function t12() {
    let elem = document.querySelectorAll('.div-12');
    for (let i = 0; i < elem.length; i++) {
-      elem[i].style.backgroundColor = 'orange';
+      elem[i].style.background = 'orange';
    }
 }
 
