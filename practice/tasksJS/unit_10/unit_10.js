@@ -102,10 +102,7 @@ document.querySelector('.b-6').onclick = f6;
 let ar7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function f7() {
-    ar7[5] = 'italy';
-    ar7[6] = 'turkey';
-    ar7[7] = 'vietnam';
-
+    ar7.push('italy', 'turkey', 'vietnam');
     let out = '';
 
     for (let i = 0; i < ar7.length; i++) {
@@ -293,9 +290,9 @@ function f16() {
     let out = '';
     for (let i = 0; i < ar16.length; i++) {
         if (ar16[i] % 2 === 0) {
-            ar16_even += ar16[i] + ' ';
+            ar16_even.push(ar16[i]);
         } else {
-            ar16_odd += ar16[i] + ' ';
+            ar16_odd.push(ar16[i]);
         }
     }
     document.querySelector('.out-16-even').textContent = ar16_even;
@@ -336,6 +333,7 @@ let ar18 = [15, 24, 13, 78, 21, 4, 45, 67];
 
 function f18() {
     let max = ar18[0];
+    let min = ar18[0]
     for (let i = 0; i < ar18.length; i++) {
         if (ar18[i] > max) {
             max = ar18[i];
@@ -378,7 +376,7 @@ let ar20 = [4, 5, 6, 7, 8, 9, 10];
 function f20() {
     let sum = 0;
     for (let i = 0; i < ar20.length; i++) {
-        sum = sum + ar20[i];
+        sum += ar20[i];
     }
     document.querySelector('.out-20').textContent = sum;
 }
