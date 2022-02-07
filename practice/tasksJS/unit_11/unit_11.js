@@ -260,17 +260,19 @@ let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
     let inputValue = +document.querySelector('.i-15').value;
-    if (d15.indexOf(inputValue) === -1) {
-        d15.push(inputValue);
-    }
+    // if (d15.indexOf(inputValue) === -1) {
+    //     d15.push(inputValue);
+    // }
 
     //! Почему не работает?
-    // for (let i = 0; i < d15.length; i++) {
-    //     if (d15[i] !== inputValue) {
-    //         d15.push(inputValue);
-    //         break;
-    //     }
-    // }
+    for (let i = 0; i < d15.length; i++) {
+        // console.log(d15[i])
+        if (d15[i] === inputValue) {
+            console.log(inputValue);
+            d15.push(inputValue);
+            break;
+        }
+    }
 
     showArr('.out-15', d15);
 }
