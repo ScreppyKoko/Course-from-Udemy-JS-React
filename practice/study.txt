@@ -2,6 +2,7 @@
 Статьи для изучения , изученное отмечаем
 
 тестовое по верстке  -  https://www.figma.com/file/iDNSwOK7bqoKCpWte8m9w4/test-task-html%2Fcss?node-id=1%3A2
+тестовые из собесов - https://github.com/Hexlet/ru-test-assignments
 небольшие тестики - https://drive.google.com/file/d/1xXLFKnhETnMqI444sm4Jq1fpEcLQlnyb/view
 литература по JS -  https://github.com/azat-io/you-dont-know-js-ru
 вопросы для собесов - https://github.com/fullstack-development/developers-roadmap/commit/3838c9376f88cd0da99b3c200066ba2d61725c40
