@@ -229,18 +229,28 @@ function t10() {
 document.querySelector('.b-10').onclick = t10;
 
 //! дополнительные задачи:
+let output = document.querySelectorAll('.output');
+
+for (let i = 0; i < output.length; i++) {
+   output[i].style.backgroundColor = "#ffffff";
+   output[i].style.paddingLeft = '10px';
+}
+
 
 // Task 1
 // Используя вложенные циклы создайте таблицу умножения от 1 до 10. Т.е. вначале столбец 1x1, 1x2...1x9
 // потом 2x1, 2x2 ... 2x9 и так далее. Оформить в виде столбцов где выводятся множители и результат.
 
-let output = document.querySelector('.output');
-output.style.backgroundColor = "#ffffff";
-output.style.paddingLeft = '10px';
-
 function task1() {
-   
-   document.querySelector('.output-1').textContent = 1;
+   let out = '';
+
+   for (let i = 1; i <= 9; i++) {
+      for (let j = 1; j <= 9; j++) {
+         out += `${i} * ${j} = ${i * j}<br>`;
+      }
+      out += '<br>';
+   }
+   document.querySelector('.output-1').innerHTML = out;
 }
 
 document.querySelector('.button-1').onclick = task1;
@@ -252,7 +262,19 @@ document.querySelector('.button-1').onclick = task1;
 // *****
 // *****
 
+function task2() {
+   let out = '';
 
+   for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 5; j++) {
+         out += '*';
+      }
+      out += '<br>';
+   }
+   document.querySelector('.output-2').innerHTML = out;
+}
+
+document.querySelector('.button-2').onclick = task2;
 
 // Task 3
 // С помощью вложенных циклов и символа * нарисуйте:
@@ -263,12 +285,46 @@ document.querySelector('.button-1').onclick = task1;
 //    **
 //    *
 
+function task3() {
+   let out = '';
+   for (let i = 5; i > 0; i--) {
+      for (let j = 0; j < i; j++) {
+         out += '*';
+      }
+      out += '<br>';
+   }
+   document.querySelector('.output-3').innerHTML = out;
+}
+
+document.querySelector('.button-3').onclick = task3;
+
 // Task 4
 // С помощью вложенных циклов и символа * нарисуйте:
 
 //      *****
 //     *****
 //    *****
+
+function task4() {
+   let out = '';
+   let space = 2;
+   let space2 = 7;
+   for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 8; j++) {
+         if (j < space || j > space2) {
+            out += '&nbsp&nbsp';
+         } else {
+            out += '*';
+         }
+      }
+      out += '<br>';
+      space--;
+      space2--;
+   }
+   document.querySelector('.output-4').innerHTML = out;
+}
+
+document.querySelector('.button-4').onclick = task4;
 
 // Task 5
 // С помощью вложенных циклов и символа * нарисуйте:
@@ -279,8 +335,20 @@ document.querySelector('.button-1').onclick = task1;
 //    **
 //    *
 
+function task5() {
+   let out = '';
+   for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 3; j++) {
+         out += '*';
+      }
+      out += '<br>';
+   }
+   document.querySelector('.output-5').innerHTML = out;
+}
+
+document.querySelector('.button-5').onclick = task5;
+
 // Task 6
-	
 // С помощью вложенных циклов и символа * нарисуйте:
 
 // 	******
@@ -289,6 +357,12 @@ document.querySelector('.button-1').onclick = task1;
 // 	*       *
 //    ******
 
+function task6() {
+   let out = '';
+   document.querySelector('.output-6').innerHTML = out;
+}
+
+document.querySelector('.button-6').onclick = task6;
 
 // Task 7
 // С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла:
@@ -299,6 +373,23 @@ document.querySelector('.button-1').onclick = task1;
 // 2 1
 // 1
 
+function task7() {
+   let out = '';
+   let count = 6;
+   for (let i = 0; i < 5; i++) {
+      for (let j = 5; j > 0; j--) {
+         if (j < count) {
+            out += j + ' ';
+         }
+      }
+      out += '<br>';
+      count--;
+   }
+   document.querySelector('.output-7').innerHTML = out;
+}
+
+document.querySelector('.button-7').onclick = task7;
+
 // Task 8
 // С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла:
 
@@ -307,6 +398,13 @@ document.querySelector('.button-1').onclick = task1;
 //     3 2 1
 //   4 3 2 1
 // 5 4 3 2 1
+
+function task8() {
+   let out = '';
+   document.querySelector('.output-8').innerHTML = out;
+}
+
+document.querySelector('.button-8').onclick = task8;
 
 // Task 9
 // С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла:
@@ -317,6 +415,13 @@ document.querySelector('.button-1').onclick = task1;
 // X 4 3 2 1
 // 5 4 3 2 1
 
+function task9() {
+   let out = '';
+   document.querySelector('.output-9').innerHTML = out;
+}
+
+document.querySelector('.button-9').onclick = task9;
+
 // Task 10
 // С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла:
 
@@ -325,6 +430,13 @@ document.querySelector('.button-1').onclick = task1;
 //   3  3  3
 //   4  4  4  4
 //   5  5  5  5  5
+
+function task10() {
+   let out = '';
+   document.querySelector('.output-10').innerHTML = out;
+}
+
+document.querySelector('.button-10').onclick = task10;
 
 // Task 11
 // С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла (четные заменены на X):
@@ -335,12 +447,26 @@ document.querySelector('.button-1').onclick = task1;
 //   X  X  X  X
 //   1  1  1  1  1
 
+function task11() {
+   let out = '';
+   document.querySelector('.output-11').innerHTML = out;
+}
+
+document.querySelector('.button-11').onclick = task11;
+
 // Task 12
 // С помощью вложенных циклов и символа * нарисуйте:
 
 //      *****
 //     *******
 //    *********
+
+function task12() {
+   let out = '';
+   document.querySelector('.output-12').innerHTML = out;
+}
+
+document.querySelector('.button-12').onclick = task12;
 
 // Task 13
 // С помощью вложенных циклов и символа * нарисуйте:
@@ -351,4 +477,9 @@ document.querySelector('.button-1').onclick = task1;
 //     ****
 //      **
 
+function task13() {
+   let out = '';
+   document.querySelector('.output-13').innerHTML = out;
+}
 
+document.querySelector('.button-13').onclick = task13;
