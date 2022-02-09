@@ -26,13 +26,13 @@ function f2() {
         "two": "mahai",
         "five": "hi"
     };
-
-    // return
+    document.querySelector('.out-2').textContent = a2.five;
+    return a2.five;
 }
 
 document.querySelector('.b-2').onclick = () => {
     document.querySelector('.out-2').innerHTML = f2();
-}
+};
 
 
 // Task 3
@@ -49,12 +49,14 @@ function f3() {
         "odd": "hi",
         "mix": "mix"
     };
-    // return
+
+    document.querySelector('.out-3').textContent = a3.five;
+    return a3.five + ' ';
 }
 
 document.querySelector('.b-3').onclick = () => {
     document.querySelector('.out-3').innerHTML = f3();
-}
+};
 
 
 // Task 4
@@ -71,8 +73,11 @@ let a4 = {
     "mix": "mix"
 };
 function f4() {
-
-    // return out;
+    let out = '';
+    for (let key in a4) {
+        out += `${key} ${a4[key]} <br>`;
+    }
+    return out;
 }
 
 document.querySelector('.b-4').onclick = () => {
@@ -86,9 +91,14 @@ document.querySelector('.b-4').onclick = () => {
 function f5(arr, block) {
     let out = '';
     // цикл
-    // формат вывода `${key} : ${arr[key]} <br>`;
+    for (let key in arr) {
+        // формат вывода `${key} : ${arr[key]} <br>`;
+        out += `${key} : ${arr[key]} <br>`;
+    }
     //
     // тут вывод в блок block
+    document.querySelector(block).innerHTML = out;
+    return block;
 }
 
 // давайте протестируем f5
@@ -97,10 +107,9 @@ document.querySelector('.b-5').onclick = () => {
     let a5 = {
         "one": 1,
         "two": 2
-    }
+    };
     f5(a5, '.out-5');
-}
-
+};
 
 // Task 6
 // Добавьте input .i-61 и i-62. При нажатии b-6 выполняете функцию f6. Функция должна получать из i-61 ключ, а из i-62 значение и добавлять его в массив a6. После этого, с помощью функции f5 выводите массив a6 в out-6.
@@ -111,7 +120,10 @@ let a6 = {
 };
 
 function f6() {
-
+    let inputKey = document.querySelector('.i-61').value;
+    let inputValue = document.querySelector('.i-62').value;
+    a6[inputKey] = inputValue;
+    f5(a6, '.out-6');
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -126,7 +138,12 @@ let a7 = {
 
 
 function f7() {
-
+    let input = document.querySelector('.i-7').value;
+    if (input in a7) {
+        document.querySelector('.out-7').textContent = 1;
+    } else {
+        document.querySelector('.out-7').textContent = 0;
+    }
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -140,7 +157,24 @@ let a8 = {
 };
 
 function f8() {
+    let input = document.querySelector('.i-8').value;
+    if (input in a8) {
+        document.querySelector('.out-8').textContent = a8[input];
+    } else {
+        document.querySelector('.out-8').textContent = 0;
+    }
 
+    // можно и циклом
+    // let out = ''
+    // for (let key in a8) {
+    //     if (key == input) {
+    //         out = a8[key];
+    //         break;
+    //     } else {
+    //         out = 0;
+    //     }
+    // }
+    // document.querySelector('.out-8').textContent = out;
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -157,7 +191,14 @@ let a9 = {
 };
 
 function f9() {
-
+    let input = document.querySelector('.i-9').value;
+    let out = '';
+    for (let key in a9) {
+        if (input == a9[key]) {
+            out += key + ' ';
+        }
+    }
+    document.querySelector('.out-9').textContent = out;
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -166,9 +207,12 @@ document.querySelector('.b-9').onclick = f9;
 // Давайте напишем полезную функцию f10, которая проверяет есть ли значение в ассоциативном массиве. Фукнция должна возвращать true если есть, и false если нет. Массив и значение передавать функции в качестве параметров.
 
 function f10(arr, val) {
-
-    //return true;
-    //return false;
+    for (let key in arr) {
+        if (val == arr[key]) {
+            return true;
+        }
+    }
+    return false;
 }
 
 document.querySelector('.b-10').onclick = () => {
@@ -193,6 +237,13 @@ let a11 = {
 };
 
 function f11() {
+    let input = document.querySelector('.i-11').value;
+    for (let key in a11) {
+        if (input == key) {
+            delete a11[key];
+        }
+    }
+    f5(a11, '.out-11');
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -209,7 +260,13 @@ let a12 = {
 };
 
 function f12() {
-
+    let input = document.querySelector('.i-12').value;
+    for (let key in a12) {
+        if (input == a12[key]) {
+            delete a12[key];
+        }
+    }
+    f5(a12, '.out-12');
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -225,7 +282,13 @@ let a13 = {
 };
 
 function f13() {
-
+    let out = '';
+    for (let key in a13) {
+        if (typeof a13[key] == 'number') {
+            out += a13[key];
+        }
+    }
+    document.querySelector('.out-13').textContent = out;
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -242,7 +305,11 @@ let a14 = {
 };
 
 function f14() {
-
+    let out = '';
+    for (let key in a14) {
+        out += a14[key][0] + ' ';
+    }
+    document.querySelector('.out-14').textContent = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -260,7 +327,13 @@ let a15 = {
 };
 
 function f15() {
-
+    let out = '';
+    for (let key in a15) {
+        for (let i = 0; i < a15[key].length; i++) {
+            out += a15[key][i] + ' ';
+        }
+    }
+    document.querySelector('.out-15').textContent = out;
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -284,7 +357,11 @@ let a16 = {
 }
 
 function f16() {
-
+    let out = '';
+    for (let key in a16) {
+        out += a16[key]['name'] + ' ';
+    }
+    document.querySelector('.out-16').textContent = out;
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -309,7 +386,13 @@ let a17 = {
 }
 
 function f17() {
-
+    let out = '';
+    for (let key in a17) {
+        if (a17[key]['age'] > 30) {
+            out += a17[key]['age'] + ' ';
+        }
+    }
+    document.querySelector('.out-17').innerHTML = out;
 }
 
 document.querySelector('.b-17').onclick = f17;
@@ -324,8 +407,27 @@ let a18 = {
 }
 
 function f18() {
+    let out = [];
+    let input = document.querySelector('.i-18').value;
+    for (let key in a18) {
+        if (key == input) {
+            out.push(a18[key].join(' '));
+        }
+    }
+    document.querySelector('.out-18').textContent = out;
 
+    // let input = document.querySelector('.i-18').value;
+    // let out = '';
+
+    // if (a18[input] !== undefined) {
+    //     for (let i = 0; i < a18[input].length; i++) {
+    //         out += a18[input][i] + ' ';
+    //     }
+    // }
+    // document.querySelector('.out-18').textContent = out;
 }
+
+document.querySelector('.b-18').onclick = f18;
 
 // Task 19
 // При нажатии b-19 выполняете функцию f19. Функция должна в out-19 вывести цвет ветки станции которую пользователь ввел в i-19. Пользователь может вводить текст как с большой, так и с маленькой буквы. Если ветка не найдена - выводите пустую строку.
@@ -338,7 +440,18 @@ let a19 = {
 }
 
 function f19() {
+    let out = '';
+    let station = document.querySelector('.i-19').value.toLowerCase();
 
+    for (let key in a19) {
+        for (let i = 0; i < a19[key].length; i++) {
+            if (a19[key][i].toLowerCase() == station) {
+                out = key;
+                break;
+            }
+        }
+    }
+    document.querySelector('.out-19').textContent = out;
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -353,7 +466,17 @@ let a20 = {
 }
 
 function f20() {
-
+    let out = '';
+    for (let key in a20) {
+        for (let i = 0; i < a20[key].length; i++) {
+            for (let j = 0; j < a20[key][i].length; j++) {
+                if (a20[key][i][j] == 2) {
+                    out += a20[key][i][0] + ' ';
+                }
+            }
+        }
+    }
+    console.log(out);
 }
 
 document.querySelector('.b-20').onclick = f20
