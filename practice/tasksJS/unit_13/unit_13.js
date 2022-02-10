@@ -9,7 +9,7 @@ function f1() {
         "five": 20
     };
     document.querySelector('.out-1').innerHTML = a1.two;
-    //return ...
+    return a1.two;
 }
 
 document.querySelector('.b-1').onclick = f1;
@@ -50,8 +50,7 @@ function f3() {
         "mix": "mix"
     };
 
-    document.querySelector('.out-3').textContent = a3.five;
-    return a3.five + ' ';
+    return a3.five + ' ' + a3.odd;
 }
 
 document.querySelector('.b-3').onclick = () => {
@@ -282,13 +281,13 @@ let a13 = {
 };
 
 function f13() {
-    let out = '';
+    let sum = 0;
     for (let key in a13) {
         if (typeof a13[key] == 'number') {
-            out += a13[key];
+            sum += a13[key];
         }
     }
-    document.querySelector('.out-13').textContent = out;
+    document.querySelector('.out-13').textContent = sum;
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -377,7 +376,7 @@ let a17 = {
     },
     "iiss7j": {
         "name": "Petr",
-        "age": 26,
+        "age": 36,
     },
     "s3s8sj": {
         "name": "Serg",
@@ -389,7 +388,7 @@ function f17() {
     let out = '';
     for (let key in a17) {
         if (a17[key]['age'] > 30) {
-            out += a17[key]['age'] + ' ';
+            out += a17[key]['name'] + ' ';
         }
     }
     document.querySelector('.out-17').innerHTML = out;
@@ -468,15 +467,19 @@ let a20 = {
 function f20() {
     let out = '';
     for (let key in a20) {
-        for (let i = 0; i < a20[key].length; i++) {
-            for (let j = 0; j < a20[key][i].length; j++) {
-                if (a20[key][i][j] == 2) {
-                    out += a20[key][i][0] + ' ';
-                }
-            }
+        let station = a20[key];
+        for (let el of station) {
+            if (el[1] == 2) out += el[0] + ' ';
         }
+        // for (let i = 0; i < a20[key].length; i++) {
+        //     for (let j = 0; j < a20[key][i].length; j++) {
+        //         if (a20[key][i][j] == 2) {
+        //             out += a20[key][i][0] + ' ';
+        //         }
+        //     }
+        // }
     }
-    console.log(out);
+    document.querySelector('.out-20').textContent = out;
 }
 
 document.querySelector('.b-20').onclick = f20
