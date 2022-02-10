@@ -7,6 +7,7 @@
 литература по JS -  https://github.com/azat-io/you-dont-know-js-ru
 вопросы для собесов - https://github.com/fullstack-development/developers-roadmap/commit/3838c9376f88cd0da99b3c200066ba2d61725c40
 горячие клавиши в VScode - https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html 
+курс по TypeScript - https://docs.microsoft.com/ru-ru/learn/paths/build-javascript-applications-typescript/
 
 разработка: 
 настройка области клика - https://tproger.ru/articles/clickable-area/
