@@ -18,10 +18,10 @@ console.log(s1);
 
 
 // let s2 =
+let s2 = new Set();
 
 const f2 = () => {
     let input = document.querySelector('.i-2').value;
-    let s2 = new Set();
     s2 = s2.add(input);
     console.log(s2);
 };
@@ -184,7 +184,6 @@ const f13 = () => {
     let arr13 = Array.from(str13);
     let s13 = new Set(arr13);
     let obj = {};
-    let out = '';
     for (let item of s13) {
         let count = 0;
         for (let letter of str13) {
