@@ -27,7 +27,7 @@ function t1() {
 
 document.querySelector('.b-1').onclick = () => {
     console.log(t1());
-}
+};
 
 // Task 2 ============================================
 /*  Дан массив a2= [2,3,4,5,10,11,12] - с помощью map переберите массив и создайте массив a2_res куда добавьте элементы данного массива возведенные во вторую степень. Возвратите массив a2_res. Действия должны запускаться при вызове функции t2.*/
@@ -35,12 +35,18 @@ document.querySelector('.b-1').onclick = () => {
 let a2 = [2, 3, 4, 5, 10, 11, 12];
 
 function t2() {
+    // let a2_res = a2.map(function (elem) {
+    //     return elem **= 2;
+    // });
 
+    let a2_res = a2.map(elem => elem **= 2);
+
+    return a2_res;
 }
 
 document.querySelector('.b-2').onclick = () => {
     console.log(t2());
-}
+};
 
 
 // Task 3 ============================================
@@ -50,12 +56,17 @@ document.querySelector('.b-2').onclick = () => {
 let a3 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
 function t3() {
-
+    let a3_res = a3.map((elem) => {
+        if (typeof elem === 'number') {
+            return elem;
+        }
+    });
+    return a3_res;
 }
 
 document.querySelector('.b-3').onclick = () => {
     console.log(t3());
-}
+};
 
 
 // Task 4 ============================================
@@ -64,12 +75,17 @@ document.querySelector('.b-3').onclick = () => {
 let a4 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
 function t4() {
-
+    let a4_res = a4.filter((elem) => {
+        if (typeof elem === 'number') {
+            return elem;
+        }
+    });
+    return a4_res;
 }
 
 document.querySelector('.b-4').onclick = () => {
     console.log(t4());
-}
+};
 
 
 
@@ -79,12 +95,17 @@ document.querySelector('.b-4').onclick = () => {
 let a5 = [3, 14, 15, 92, '6'];
 
 function t5() {
-
+    let a5_res = a5.filter(function (elem) {
+        if (elem % 2 == 0 && typeof elem === 'number') {
+            return elem;
+        }
+    });
+    return a5_res;
 }
 
 document.querySelector('.b-5').onclick = () => {
     console.log(t5());
-}
+};
 
 
 
@@ -94,12 +115,15 @@ document.querySelector('.b-5').onclick = () => {
 let a6 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t6() {
-
+    let a6_res = a6.filter(elem => {
+        if (typeof elem === 'number' && elem > 14) return elem;
+    });
+    return a6_res;
 }
 
 document.querySelector('.b-6').onclick = () => {
     console.log(t6());
-}
+};
 
 
 // Task 7 ============================================
@@ -108,12 +132,15 @@ document.querySelector('.b-6').onclick = () => {
 let a7 = ['Alto`s Adventure', 'Angry Birds 2', 'Anno 2205', 'Assassin`s Creed Chronicles'];
 
 function t7() {
-
+    let a7_res = a7.map((item) => {
+        return item.toLowerCase();
+    });
+    return a7_res;
 }
 
 document.querySelector('.b-7').onclick = () => {
     console.log(t7());
-}
+};
 
 // Task 8 ============================================
 /* Дан массив a8 = [3, 14, 15, 92, 7, 32, 59]. C помощью цикла или метода - решить самостоятельно, переберите массив a8 и добавьте в a8_res индексы четных элементов. Т.е. для данного примера по результату работы функции в a8_res должны быть [1, 3, 5]. Функция должна возвращать a8_res. */
@@ -121,12 +148,23 @@ document.querySelector('.b-7').onclick = () => {
 let a8 = [3, 14, 15, 92, 7, 32, 59];
 
 function t8() {
+    // let a8_res = [];
+    // for (let i = 0; i < a8.length; i++) {
+    //     if (a8[i] % 2 === 0) {
+    //         a8_res.push(i);
+    //     }
+    // }
+    // return a8_res;
 
+    let a8_res = a8.filter((item, index) => {
+        if (item % 2 === 0) return index;
+    });
+    return a8_res;
 }
 
 document.querySelector('.b-8').onclick = () => {
     console.log(t8());
-}
+};
 
 
 
@@ -136,12 +174,15 @@ document.querySelector('.b-8').onclick = () => {
 let a9 = ['Quantum Break', 'Gears of War 4', 'Mass Effect: Andromeda', 'Far Cry Primal'];
 
 function t9() {
-
+    let newArr = [];
+    a9.forEach(elem => newArr.push(elem.toLowerCase()));
+    a9 = newArr;
+    return a9;
 }
 
 document.querySelector('.b-9').onclick = () => {
     console.log(t9());
-}
+};
 
 
 
@@ -151,13 +192,18 @@ document.querySelector('.b-9').onclick = () => {
 let a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t10() {
-
-
+    let newArr = [];
+    a10.forEach(elem => {
+        if (elem < 0) elem = 0;
+        return newArr.push(elem);
+    });
+    a10 = newArr;
+    return a10;
 }
 
 document.querySelector('.b-10').onclick = () => {
     console.log(t10());
-}
+};
 
 // Task 11 ============================================
 /*  Дан массив a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью filter, переберите массив a11 и создайте новый массив a11_res куда добавьте только те элементы массива ИНДЕКС которых - четный. Возвратите a11_res.*/
@@ -165,13 +211,16 @@ document.querySelector('.b-10').onclick = () => {
 let a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t11() {
-
-
+    let a11_res = a11.filter(function (item, index) {
+        if (index % 2 === 0) return true;
+    });
+    // a11_res = a11.filter((elem, index) => index % 2 === 0);
+    return a11_res;
 }
 
 document.querySelector('.b-11').onclick = () => {
     console.log(t11());
-}
+};
 
 // Task 12 ============================================
 /*  Данa переменная a12 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью метода Array.isArray определите является ли переменная a12 массивом. Если да - то функция возврaщает true, если нет false.*/
@@ -180,13 +229,12 @@ let a12 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 // a12 = 8; // на этой переменной можно проверить работает или нет ваша функция.
 
 function t12() {
-
-
+    return Array.isArray(a12);
 }
 
 document.querySelector('.b-12').onclick = () => {
     console.log(t12());
-}
+};
 
 // Task 13 ============================================
 /*  Дан массив a13 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью метода includes функция t13 должна определить, есть ли значение из переменной a13_num в массиве. Если да - то функция возврaщает true, если нет false.*/
@@ -196,29 +244,36 @@ let a13_num = 9;
 
 
 function t13() {
-
-
+    return a13.includes(a13_num);
 }
 
 document.querySelector('.b-13').onclick = () => {
     console.log(t13());
-}
+};
 
 // Task 14 ============================================
 /*  Дан массив a14 = ['c', 'C', 'd', 'e', 'E']. С помощью метода includes функция t14 должна определить, есть ли значение из переменной a14_sym в массиве. Если да - то функция возврaщает true, если нет false. Обратите внимание, функция должна искать независимо от регистра. Т.е. если в a14_sym будет строка 'd' то возвратить true, однако и на строку 'D' тоже возвратить true. */
 
-let a14 = ['c', 'C', 'd', 'e', 'E'];
-let a14_sym = 'e';
+let a14 = ['c', 'C', 'D', 'e', 'E'];
+let a14_sym = 'd';
 
 
 function t14() {
+    let newArr = [];
+    // for (let item of a14) {
+    //     newArr.push(item.toLowerCase());
+    // }
+    // a14 = newArr;
+    // return a14.includes(a14_sym);
 
-
+    a14.map(item => newArr.push(item.toLowerCase()));
+    a14 = newArr;
+    return a14.includes(a14_sym);
 }
 
 document.querySelector('.b-14').onclick = () => {
     console.log(t14());
-}
+};
 
 // Task 15 ============================================
 /*  Дан массив a15. С помощью метода filter функция t15 должна создать на его основе массив a15_res содержащий записи только тех пользователей, номер паспорта (pnum) которых не пустая строка и длина номера - 6 символов. Функция должна возвращать a15_res.*/
@@ -257,10 +312,13 @@ let a15 = [
 
 
 function t15() {
-
-
+    let a15_res = [];
+    a15.filter(elem => {
+        if (elem.pnum && elem.pnum.length < 8) a15_res.push(elem);
+    });
+    return a15_res;
 }
 
 document.querySelector('.b-15').onclick = () => {
     console.log(t15());
-}
+};
