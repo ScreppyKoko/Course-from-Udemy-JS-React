@@ -39,7 +39,7 @@ function t2() {
     //     return elem **= 2;
     // });
 
-    let a2_res = a2.map(elem => elem **= 2);
+    a2_res = a2.map(elem => elem **= 2);
 
     return a2_res;
 }
@@ -56,7 +56,7 @@ document.querySelector('.b-2').onclick = () => {
 let a3 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
 function t3() {
-    let a3_res = a3.map((elem) => {
+    a3_res = a3.map((elem) => {
         if (typeof elem === 'number') {
             return elem;
         }
@@ -75,7 +75,7 @@ document.querySelector('.b-3').onclick = () => {
 let a4 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
 function t4() {
-    let a4_res = a4.filter((elem) => {
+    a4_res = a4.filter((elem) => {
         if (typeof elem === 'number') {
             return elem;
         }
@@ -95,7 +95,7 @@ document.querySelector('.b-4').onclick = () => {
 let a5 = [3, 14, 15, 92, '6'];
 
 function t5() {
-    let a5_res = a5.filter(function (elem) {
+    a5_res = a5.filter(function (elem) {
         if (elem % 2 == 0 && typeof elem === 'number') {
             return elem;
         }
@@ -115,7 +115,7 @@ document.querySelector('.b-5').onclick = () => {
 let a6 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t6() {
-    let a6_res = a6.filter(elem => {
+    a6_res = a6.filter(elem => {
         if (typeof elem === 'number' && elem > 14) return elem;
     });
     return a6_res;
@@ -132,7 +132,7 @@ document.querySelector('.b-6').onclick = () => {
 let a7 = ['Alto`s Adventure', 'Angry Birds 2', 'Anno 2205', 'Assassin`s Creed Chronicles'];
 
 function t7() {
-    let a7_res = a7.map((item) => {
+    a7_res = a7.map((item) => {
         return item.toLowerCase();
     });
     return a7_res;
@@ -156,7 +156,7 @@ function t8() {
     // }
     // return a8_res;
 
-    let a8_res = a8.filter((item, index) => {
+    a8_res = a8.filter((item, index) => {
         if (item % 2 === 0) return index;
     });
     return a8_res;
@@ -192,12 +192,12 @@ document.querySelector('.b-9').onclick = () => {
 let a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t10() {
-    let newArr = [];
+    let a10_res = [];
     a10.forEach(elem => {
         if (elem < 0) elem = 0;
-        return newArr.push(elem);
+        return a10_res.push(elem);
     });
-    a10 = newArr;
+    a10 = a10_res;
     return a10;
 }
 
@@ -211,7 +211,7 @@ document.querySelector('.b-10').onclick = () => {
 let a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t11() {
-    let a11_res = a11.filter(function (item, index) {
+    a11_res = a11.filter(function (item, index) {
         if (index % 2 === 0) return true;
     });
     // a11_res = a11.filter((elem, index) => index % 2 === 0);
@@ -312,7 +312,7 @@ let a15 = [
 
 
 function t15() {
-    let a15_res = [];
+    a15_res = [];
     a15.filter(elem => {
         if (elem.pnum && elem.pnum.length < 8) a15_res.push(elem);
     });
