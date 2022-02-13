@@ -14,7 +14,7 @@
 const param = {
    "url": "https://api.openweathermap.org/data/2.5/",
    "appid": "5ae4b8137659070dc9f52384a8f145d7"
-}
+};
 
 function getWeather() {
    const cityId = document.querySelector('.city__id').value;
