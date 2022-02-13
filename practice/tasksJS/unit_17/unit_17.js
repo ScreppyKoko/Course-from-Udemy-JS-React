@@ -148,18 +148,18 @@ document.querySelector('.b-7').onclick = () => {
 let a8 = [3, 14, 15, 92, 7, 32, 59];
 
 function t8() {
-    // let a8_res = [];
-    // for (let i = 0; i < a8.length; i++) {
-    //     if (a8[i] % 2 === 0) {
-    //         a8_res.push(i);
-    //     }
-    // }
-    // return a8_res;
-
-    a8_res = a8.filter((item, index) => {
-        if (item % 2 === 0) return index;
-    });
+    let a8_res = [];
+    for (let i = 0; i < a8.length; i++) {
+        if (a8[i] % 2 === 0) {
+            a8_res.push(i);
+        }
+    }
     return a8_res;
+    //! не работает правильно!!!
+    // a8_res = a8.filter((item, index) => {
+    //     if (item % 2 === 0) return index;
+    // });
+    // return a8_res;
 }
 
 document.querySelector('.b-8').onclick = () => {
@@ -259,16 +259,7 @@ let a14_sym = 'd';
 
 
 function t14() {
-    let newArr = [];
-    // for (let item of a14) {
-    //     newArr.push(item.toLowerCase());
-    // }
-    // a14 = newArr;
-    // return a14.includes(a14_sym);
-
-    a14.map(item => newArr.push(item.toLowerCase()));
-    a14 = newArr;
-    return a14.includes(a14_sym);
+    return a14.includes(a14_sym.toLowerCase()) || a14.includes(a14_sym.toUpperCase());
 }
 
 document.querySelector('.b-14').onclick = () => {
@@ -312,9 +303,8 @@ let a15 = [
 
 
 function t15() {
-    a15_res = [];
     a15.filter(elem => {
-        if (elem.pnum && elem.pnum.length < 8) a15_res.push(elem);
+        if (elem.pnum.length === 6) a15_res.push(elem);
     });
     return a15_res;
 }
