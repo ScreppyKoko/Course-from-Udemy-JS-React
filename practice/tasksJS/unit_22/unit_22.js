@@ -4,10 +4,15 @@
 
 function t1() {
     // тут добавляете try
-    let a = 22;
-    let c = a + d;
+    try {
+        let a = 22;
+        let c = a + d;
+    }
     // тут catch
-    // .. и вывод
+    catch {
+        // .. и вывод
+        document.querySelector('.out-1').textContent = 1;
+    }
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -18,8 +23,11 @@ document.querySelector('.b-1').onclick = t1;
 function t2() {
     let a = 4;
     let b = 5;
-    document.querySelector('.out-2222222').innerHTML = a*b;
-
+    try {
+        document.querySelector('.out-2222222').innerHTML = a * b;
+    } catch {
+        document.querySelector('.out-2').innerHTML = a * b;
+    }
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -32,7 +40,14 @@ document.querySelector('.b-2').onclick = t2;
 function t3() {
     let a = 4;
     let b = 5;
-    document.querySelector('.out-3').innerHTML = a*b;
+    try {
+        document.querySelector('.out-3').innerHTML = a * b;
+    } catch {
+        let div = document.createElement('div');
+        div.classList.add('out-3');
+        div.innerHTML = a * b;
+        document.querySelector('.b-3').after(div);
+    }
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -40,11 +55,16 @@ document.querySelector('.b-3').onclick = t3;
 //  Task 4
 // Дана переменная a. В переменную делается push. Используя try catch отловите ошибки если они есть. Если ошибка вывести в out-4 число 0. Если не ошибка - то результирующий массив через пробел.
 
-let a = [2,3,4];
-// a = 5;
+let a = [2, 3, 4];
+a = 5;
 
 function t4() {
-    a.push(7);
+    try {
+        a.push(7);
+        document.querySelector('.out-4').textContent = a.join(' ');
+    } catch {
+        document.querySelector('.out-4').textContent = 0;
+    }
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -55,7 +75,13 @@ document.querySelector('.b-4').onclick = t4;
 
 function t5() {
     let p = document.querySelectorAll('p');
-    p.push(3);
+    try {
+        p.push(3);
+    } catch {
+        document.querySelector('.out-5').textContent = 0;
+    } finally {
+        document.querySelector('.out-5-1').textContent = 'finally';
+    }
 }
 
 document.querySelector('.b-5').onclick = t5;
