@@ -128,7 +128,7 @@ document.querySelector('.b-9').onclick = t9;
 
 function t10() {
     let a10 = { name: 'ivan', age: 15, sex: 1, id: 45 };
-    a10_res = new URLSearchParams(a10);
+    a10_res = '?' + new URLSearchParams(a10);
     document.querySelector('.out-10').textContent = a10_res;
 }
 
