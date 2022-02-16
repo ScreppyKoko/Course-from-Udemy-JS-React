@@ -149,12 +149,23 @@ document.querySelector('.i-10').onkeydown = t10;
 5. Самостоятельно добавьте клавишу alt, enter.
 */
 
+let keyboard = document.querySelectorAll('.keyboard');
+let block = document.querySelector('.out-11');
+let inp = document.querySelector('.i-11');
+let warning = document.getElementById('warning');
+
+function clickInp(event) {
+    event.stopPropagation();
+    if (event.target.classList.contains('keyboard')) {
+        inp.value += event.target.textContent;
+    }
+}
+block.addEventListener('click', clickInp);
+
 function t11(event) {
-    let keyboard = document.querySelectorAll('.keyboard');
     for (let item of keyboard) {
         item.classList.remove('active');
     }
-
     let key = event.key;
     switch (key) {
         case 'Control': key = 'ctrl';
@@ -171,8 +182,5 @@ function t11(event) {
     btn.classList.add('active');
 }
 
-document.querySelector('.i-11').onkeydown = t11;
-
-// if (item.getAttribute('data') === event.key) {
-//     item.classList.add('active');
-// }
+inp.onkeydown = t11;
+inp.onkeypress = (event) => !/[a-z\d]/i.test(event.key) ? (warning.innerHTML = 'Запрещенные символы', false) : (warning.innerHTML = '', true);

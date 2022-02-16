@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .container {
     width: 100%;
 }
@@ -18,23 +22,47 @@ section {
 .out-11 {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
 
+.row {
+    margin: 5px 0;
+    display: flex;
+    flex: 1 1 auto;
+    gap: 10px;
 }
 
 .keyboard {
     width: 48px;
     height: 48px;
     border: 1px solid black;
-    margin: 15px;
     border-radius: 6px;
     line-height: 48px;
     text-align: center;
+    cursor: pointer;
 }
 
 .keyboard[data="space"] {
-    width: 112px;
+    width: 339px;
 }
+
+.keyboard[data="Backspace"],
+.keyboard[data="Tab"],
+.keyboard[data="CapsLock"],
+.keyboard[data="enter"],
+.keyboard[data="Shift"] {
+    width: 107px;
+}
+
+.keyboard:hover:not(.space) {
+    transform: scale(1.1);
+}
+
+.keyboard:hover {
+    background-color: rgb(250, 115, 115);
+}
+
+
 
 .active {
     background: orange;

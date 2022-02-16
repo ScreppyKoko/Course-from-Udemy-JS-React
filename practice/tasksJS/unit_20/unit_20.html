@@ -127,52 +127,102 @@
 
             <div>
 
-                <input type="text" class="i-11">
+                <input type="text" pattern="^[a-zA-Z]+$" class="i-11">
+                <div id="warning"></div>
                 <div class="out-11">
-                    <div class="keyboard" data="1">1</div>
-                    <div class="keyboard" data="2">2</div>
-                    <div class="keyboard" data="3">3</div>
-                    <div class="keyboard" data="4">4</div>
-                    <div class="keyboard" data="5">5</div>
-                    <div class="keyboard" data="6">6</div>
-                    <div class="keyboard" data="7">7</div>
-                    <div class="keyboard" data="8">8</div>
-                    <div class="keyboard" data="9">9</div>
-                    <div class="keyboard" data="0">0</div>
-                    <div class="keyboard" data="q">q</div>
-                    <div class="keyboard" data="w">w</div>
-                    <div class="keyboard" data="e">e</div>
-                    <div class="keyboard" data="r">r</div>
-                    <div class="keyboard" data="t">t</div>
-                    <div class="keyboard" data="y">y</div>
-                    <div class="keyboard" data="u">u</div>
-                    <div class="keyboard" data="i">i</div>
-                    <div class="keyboard" data="o">o</div>
-                    <div class="keyboard" data="p">p</div>
-                    <div class="keyboard" data="[">[</div>
-                    <div class="keyboard" data="]">]</div>
-                    <div class="keyboard" data="a">a</div>
-                    <div class="keyboard" data="s">s</div>
-                    <div class="keyboard" data="d">d</div>
-                    <div class="keyboard" data="f">f</div>
-                    <div class="keyboard" data="g">g</div>
-                    <div class="keyboard" data="h">h</div>
-                    <div class="keyboard" data="j">j</div>
-                    <div class="keyboard" data="k">k</div>
-                    <div class="keyboard" data="l">l</div>
-                    <div class="keyboard" data=";">;</div>
-                    <div class="keyboard" data="'">'</div>
-                    <div class="keyboard" data="enter">enter</div>
-                    <div class="keyboard" data="space">space</div>
-                    <div class="keyboard" data="ctrl">ctrl</div>
-                    <div class="keyboard" data="alt">alt</div>
+                    <div class="row">
+                        <div class="keyboard" data="Escape">Esc</div>
+                        <div class="keyboard" data="F1">F1</div>
+                        <div class="keyboard" data="F2">F2</div>
+                        <div class="keyboard" data="F3">F3</div>
+                        <div class="keyboard" data="F4">F4</div>
+                        <div class="keyboard" data="F5">F5</div>
+                        <div class="keyboard" data="F6">F6</div>
+                        <div class="keyboard" data="F7">F7</div>
+                        <div class="keyboard" data="F8">F8</div>
+                        <div class="keyboard" data="F9">F9</div>
+                        <div class="keyboard" data="F10">F10</div>
+                        <div class="keyboard" data="F11">F11</div>
+                        <div class="keyboard" data="F12">F12</div>
+                        <div class="keyboard" data="Insert">Insert</div>
+                        <div class="keyboard" data="Delete">Delete</div>
+                    </div>
+                    <div class="row">
+                        <div class="keyboard" data="`">`</div>
+                        <div class="keyboard" data="1">1</div>
+                        <div class="keyboard" data="2">2</div>
+                        <div class="keyboard" data="3">3</div>
+                        <div class="keyboard" data="4">4</div>
+                        <div class="keyboard" data="5">5</div>
+                        <div class="keyboard" data="6">6</div>
+                        <div class="keyboard" data="7">7</div>
+                        <div class="keyboard" data="8">8</div>
+                        <div class="keyboard" data="9">9</div>
+                        <div class="keyboard" data="0">0</div>
+                        <div class="keyboard" data="-">-</div>
+                        <div class="keyboard" data="=">=</div>
+                        <div class="keyboard" data="Backspace">Backspace</div>
+                    </div>
+                    <div class="row">
+                        <div class="keyboard" data="Tab">Tab</div>
+                        <div class="keyboard" data="q">q</div>
+                        <div class="keyboard" data="w">w</div>
+                        <div class="keyboard" data="e">e</div>
+                        <div class="keyboard" data="r">r</div>
+                        <div class="keyboard" data="t">t</div>
+                        <div class="keyboard" data="y">y</div>
+                        <div class="keyboard" data="u">u</div>
+                        <div class="keyboard" data="i">i</div>
+                        <div class="keyboard" data="o">o</div>
+                        <div class="keyboard" data="p">p</div>
+                        <div class="keyboard" data="[">[</div>
+                        <div class="keyboard" data="]">]</div>
+                        <div class="keyboard" data="#">#</div>
+                    </div>
+                    <div class="row">
+                        <div class="keyboard" data="CapsLock">CapsLk</div>
+                        <div class="keyboard" data="a">a</div>
+                        <div class="keyboard" data="s">s</div>
+                        <div class="keyboard" data="d">d</div>
+                        <div class="keyboard" data="f">f</div>
+                        <div class="keyboard" data="g">g</div>
+                        <div class="keyboard" data="h">h</div>
+                        <div class="keyboard" data="j">j</div>
+                        <div class="keyboard" data="k">k</div>
+                        <div class="keyboard" data="l">l</div>
+                        <div class="keyboard" data=";">;</div>
+                        <div class="keyboard" data="'">'</div>
+                        <div class="keyboard" data="enter">Enter</div>
+                    </div>
+                    <div class="row">
+                        <div class="keyboard" data="Shift">Shift</div>
+                        <div class="keyboard" data="z">z</div>
+                        <div class="keyboard" data="x">x</div>
+                        <div class="keyboard" data="c">c</div>
+                        <div class="keyboard" data="v">v</div>
+                        <div class="keyboard" data="b">b</div>
+                        <div class="keyboard" data="n">n</div>
+                        <div class="keyboard" data="m">m</div>
+                        <div class="keyboard" data=",">,</div>
+                        <div class="keyboard" data=".">.</div>
+                        <div class="keyboard" data="/">/</div>
+                        <div class="keyboard" data="ArrowUp">↑</div>
+                        <div class="keyboard" data="Shift">Shift</div>
+                    </div>
+                    <div class="row">
+                        <div class="keyboard" data="ctrl">Ctrl</div>
+                        <div class="keyboard" data="Meta">Win</div>
+                        <div class="keyboard" data="alt">Alt</div>
+                        <div class="keyboard space" data="space">space</div>
+                        <div class="keyboard" data="AltGraph">Alt</div>
+                        <div class="keyboard" data="ctrl">Ctrl</div>
+                        <div class="keyboard" data="ArrowLeft">←</div>
+                        <div class="keyboard" data="ArrowDown">↓</div>
+                        <div class="keyboard" data="ArrowRight">→</div>
+                        <div class="keyboard" data="NumLock">Num</div>
+                    </div>
                 </div>
         </section>
-
-
-
-
-
     </div>
 
     <script src="unit_20.js"></script>
