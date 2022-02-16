@@ -105,3 +105,52 @@ li {
 img {
    vertical-align: top;
 }
+
+body {
+   position: relative;
+}
+
+.wrap {
+   position: absolute;
+   top: 20vh;
+   left: 20vw;
+}
+
+.table {
+   width: 200px;
+   margin: 20px;
+   display: inline-block;
+}
+
+.table_calculate {
+   width: 150px;
+}
+
+.row {
+   display: flex;
+   flex: 1 1 33.3%;
+   justify-content: space-between;
+   gap: 5px;
+   margin: 5px 0;
+}
+
+.input {
+   width: calc(200px - 33.3%);
+   height: 25px;
+   outline: none;
+}
+
+.input::placeholder {
+   font-size: 10px;
+}
+
+.btn {
+   width: calc(200px - 33.3%);
+   height: 25px;
+   width: 100%;
+}
+
+.btn_row {}
+
+.btn_add {
+}
