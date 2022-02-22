@@ -5,20 +5,34 @@ const firstAddBtn = document.querySelector('#btn-1');
 const secondAddBtn = document.querySelector('#btn-2');
 const btnDelete = document.querySelector('.btn_del');
 const btnCalculate = document.getElementById('calculate')
-let count = 1;
+let count1 = 1;
+let count2 = 1;
 
 
 function addСalculation(event) {
-    if (event.target === firstAddBtn || event.target === secondAddBtn) {
+    if (event.target === firstAddBtn) {
         const addItem = `
-            <input autocomplete="off" type="text" id="x${count}" class="input" placeholder="enter num">
-            <input autocomplete="off" type="text" id="y${count}"class="input" placeholder="enter num">
+            <input autocomplete="off" type="text" id="x${count1} "class="input" placeholder="enter num">
+            <input autocomplete="off" type="text" id="y${count1} "class="input" placeholder="enter num">
             <button class="btn btn_del">Delete</button>
         `;
         const row = document.createElement('div');
         row.classList.add('row');
         row.innerHTML = addItem;
         event.target.before(row);
+        count1++;
+    }
+    if (event.target === secondAddBtn) {
+        const addItem = `
+            <input autocomplete="off" type="text" id="a${count2} "class="input" placeholder="enter num">
+            <input autocomplete="off" type="text" id="b${count2} "class="input" placeholder="enter num">
+            <button class="btn btn_del">Delete</button>
+        `;
+        const row = document.createElement('div');
+        row.classList.add('row');
+        row.innerHTML = addItem;
+        event.target.before(row);
+        count2++;
     }
 }
 
@@ -35,8 +49,19 @@ function search(event) {
 }
 
 function calculate(event) {
-    console.log(event)
-
+    // console.log('calculate');
+    // const addItem = `
+    //     <input autocomplete="off" type="text" class="input" placeholder="enter num">
+    //     <input autocomplete="off" type="text" class="input" placeholder="enter num">
+    // `;
+    // const row = document.createElement('div');
+    // row.classList.add('row');
+    // row.innerHTML = addItem;
+    // event.target.before(row);
+    // count2++;
+    for (let item of table) {
+        console.log(item)
+    }
 }
 
 table.forEach(element => {
