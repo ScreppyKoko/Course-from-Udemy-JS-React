@@ -236,4 +236,4 @@ const personalMovieDB = {
    },
 };
 
-console.log(+'infinity');
+// console.log(+'infinity');
