@@ -1,23 +1,58 @@
-import logo from './logo.svg';
 import './App.css';
+import {Component, StrictMode} from 'react';
+
+const Header = () => {
+  return <h2>Hey Yo</h2>
+} 
+
+const Field = () => {
+  const holder = 'Enter here'
+  const styledField = {
+    width: '300px',
+    backgroundColor: 'lime'
+  }
+  return <input 
+            type="text" 
+            name="test" 
+            id="test" 
+            placeholder={holder} 
+            style={styledField} />
+}
+
+class FieldOnClass extends Component {
+  render() {
+    const holder = 'Enter here'
+    const styledField = {
+      width: '300px',
+      backgroundColor: 'red'
+    };
+
+    return <input 
+    type="text" 
+    name="test" 
+    id="test" 
+    placeholder={holder} 
+    style={styledField} />
+  }
+}
+
+function Btn() {
+  // const res = () => {
+  //   return 'CLICK ON ME PLEASE'
+  // }
+  const text = 'Log in';
+  const logged = false;
+
+
+  return <button>{logged ? 'Enter' : text}</button>
+} 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React BITCH
-        </a>
-      </header>
+      <Header/>
+      <FieldOnClass/>
+      <Btn/>
     </div>
   );
 }
