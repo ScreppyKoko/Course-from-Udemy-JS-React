@@ -1,5 +1,6 @@
 import './App.css';
-import {Component, StrictMode} from 'react';
+import {Component} from 'react';
+import WhoAmI from './components/test_props';
 
 const Header = () => {
   return <h2>Hey Yo</h2>
@@ -9,7 +10,7 @@ const Field = () => {
   const holder = 'Enter here'
   const styledField = {
     width: '300px',
-    backgroundColor: 'lime'
+    backgroundColor: 'yellow'
   }
   return <input 
             type="text" 
@@ -24,7 +25,7 @@ class FieldOnClass extends Component {
     const holder = 'Enter here'
     const styledField = {
       width: '300px',
-      backgroundColor: 'red'
+      backgroundColor: 'blue'
     };
 
     return <input 
@@ -52,7 +53,10 @@ function App() {
     <div className="App">
       <Header/>
       <FieldOnClass/>
+      <Field/>
       <Btn/>
+      <WhoAmI name={{firstName: 'Shurka'}} surname={(() => {return 'Chernyshov'})} link='vk.com'/>
+      <WhoAmI name={{firstName: 'Alex'}} surname={(() => {return 'Lyah'})} link='vk.com'/>
     </div>
   );
 }
