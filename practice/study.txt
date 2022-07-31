@@ -4,19 +4,10 @@
 тестовое по верстке  -  https://www.figma.com/file/iDNSwOK7bqoKCpWte8m9w4/test-task-html%2Fcss?node-id=1%3A2
 тестовые из собесов - https://github.com/Hexlet/ru-test-assignments
 небольшие тестики - https://drive.google.com/file/d/1xXLFKnhETnMqI444sm4Jq1fpEcLQlnyb/view
-книга по JS -  https://github.com/azat-io/you-dont-know-js-ru Изучаем программирование на JavaScript
-источники книги "Грокаем алгоритмы" примеры на JS https://github.com/egonSchiele/grokking_algorithms/tree/master/01_introduction_to_algorithms
-конспект книги "Грокаем алгоритмы" https://habr.com/ru/company/piter/blog/323310/
+литература по JS -  https://github.com/azat-io/you-dont-know-js-ru
 вопросы для собесов - https://github.com/fullstack-development/developers-roadmap/commit/3838c9376f88cd0da99b3c200066ba2d61725c40
 горячие клавиши в VScode - https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html 
 курс по TypeScript - https://docs.microsoft.com/ru-ru/learn/paths/build-javascript-applications-typescript/
-книга по TypeScript blob:https://web.telegram.org/837d02cc-4288-4c37-8955-fe0bc21c3413
-шпаргалка https://overapi.com/javascript
-
-игры по разработке:
-https://codecombat.com/play
-https://www.cyber-dojo.org/creator/home
-https://www.codewars.com/
 
 разработка: 
 настройка области клика - https://tproger.ru/articles/clickable-area/
