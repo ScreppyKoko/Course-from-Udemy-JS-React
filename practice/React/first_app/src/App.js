@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import WhoAmI, { Button } from './components/test_props';
 import BootstrapTest from './components/BootstrapTest';
-import Form from './components/BootstrapFormTest';
 
 import styled from 'styled-components';
 import './App.css';
@@ -121,18 +120,16 @@ class Counter extends Component {
 function App() {
   return (
     <Wrapper>
-      <Form/>
+
+      <Header />
       <Counter render={counter => (
         <Message counter={counter}/>
       )}/>
-
-      <Header />
       <FieldOnClass />
       <Field />
       <Btn />
       <WhoAmI name={{ firstName: 'Shurka' }} surname={(() => { return 'Chernyshov' })} link='vk.com' />
       <WhoAmI name={{ firstName: 'Alex' }} surname={(() => { return 'Lyah' })} link='vk.com' />
-      <HelloGreatings />
       <BootstrapTest
         left={
           <DynamicGreating color={'primary'}>
@@ -146,6 +143,7 @@ function App() {
           </DynamicGreating>
         }
       />
+      <HelloGreatings />
     </Wrapper>
   );
 }
