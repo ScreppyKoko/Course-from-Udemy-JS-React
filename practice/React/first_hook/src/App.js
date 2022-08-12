@@ -1,6 +1,13 @@
 import { Component, useState, useEffect, useCallback, useMemo } from 'react';
 import { Container } from 'react-bootstrap';
+
+
 import './App.css';
+import Form from './components/formUseContext/Form';
+import dataContext from './components/formUseContext/context';
+import SliderUseReducer from './components/hookUseReducer/HookUseReducer';
+
+const { Provider } = dataContext;
 
 
 // class Slider extends Component {
@@ -89,6 +96,7 @@ const Slider = (props) => {
         window.addEventListener('click', logging);
 
         return () => {
+
             window.removeEventListener('click', logging)
         }
     }, [slide])
@@ -122,7 +130,7 @@ const Slider = (props) => {
     }, []);
 
     const style = useMemo(() => ({
-            color: slide > 4 ? 'red' : 'black'
+        color: slide > 4 ? 'red' : 'black'
     }), [slide])
 
     useEffect(() => {
@@ -134,8 +142,8 @@ const Slider = (props) => {
             <div className="slider w-50 m-auto">
 
                 {/* //! правильное использование хука useCallback? закешировали функцию (которая не должна меняться) */}
-                <Slide getSomeImages={getSomeImages}/>
-                
+                <Slide getSomeImages={getSomeImages} />
+
 
                 <div className="text-center mt-5">Active slide {slide} <br /> {autoplay ? 'auto' : null}</div>
                 <div style={style} className="text-center mt-5">Total slide: {total}</div>
@@ -179,11 +187,25 @@ const Slide = ({ getSomeImages }) => {
 
 function App() {
     const [slider, setSlider] = useState(true)
+    const [data, setData] = useState({
+        mail: 'name@example',
+        text: 'some text'
+    });
 
     return (
         <>
-            <button onClick={() => setSlider(false)}>Click</button>
-            {slider ? <Slider /> : null}
+            <SliderUseReducer initial={false} />
+            <Provider value={data}>
+                <Form text={data.text} />
+                <button
+                    onClick={() => setData({
+                        mail: 'second@example.com',
+                        text: 'another text'
+                    })}>
+                    Click me
+                </button>
+            </Provider>
+            {/* {slider ? <Slider /> : null} */}
         </>
     );
 }

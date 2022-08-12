@@ -1,8 +1,8 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import React, { useState } from 'react';
 
-import Form from './BootstrapFormTestRefs';
-import FormPortal from './BootstrapFormTestPortal';
+import FormRefs from './FormTestRefs';
+import FormPortal from './FormTestPortal';
 
 
 const BootstrapTest = (props) => {
@@ -18,7 +18,7 @@ const BootstrapTest = (props) => {
                {props.right}
             </Col>
          </Row>
-         <Form/>
+         <FormRefs/>
       </Container>
    )
 }

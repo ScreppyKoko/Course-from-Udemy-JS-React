@@ -2,7 +2,7 @@ import {Container} from 'react-bootstrap';
 import React, {Component} from 'react';
 
 //! ТЕСТИМ РЕФЫ
-class Form extends Component {
+class FormRefs extends Component {
 
     // myRef = React.createRef();
     mySecondRef = React.createRef();
@@ -50,4 +50,4 @@ class Form extends Component {
     }
 }
 
-export default Form;
+export default FormRefs;
