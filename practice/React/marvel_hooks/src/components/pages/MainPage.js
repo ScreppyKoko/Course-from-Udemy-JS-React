@@ -9,7 +9,7 @@ import decoration from '../../resources/img/vision.png';
 import CharSearchForm from '../charSearchForm/CharSearchForm';
 
 const MainPage = () => {
-
+    
     const [selectedChar, setChar] = useState(null);
 
     const onCharSelected = (id) => {
