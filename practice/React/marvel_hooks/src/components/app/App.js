@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import AppHeader from "../appHeader/AppHeader";
-import Spinner from '../../services/Spinner';
+import Spinner from '../spinner/Spinner';
 
 import TestComponent from '../testComponent/TestComponent';
 
