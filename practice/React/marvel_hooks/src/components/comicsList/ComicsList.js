@@ -40,7 +40,6 @@ const ComicsList = () => {
     }
 
     function renderItems(arr) {
-        const imgNotFound = 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg';
         const items = arr.map((item, i) => {
             return (
                 <li className="comics__item" tabIndex={0} key={i}>
@@ -48,8 +47,7 @@ const ComicsList = () => {
                         <img
                             src={item.thumbnail}
                             alt={item.title}
-                            className="comics__item-img"
-                            style={item.thumbnail === imgNotFound ? { objectFit: "contain" } : { objectFit: "cover" }} />
+                            className="comics__item-img"/>
                         <div className="comics__item-item">{item.title}</div>
                         <div className="comics__item-price">{item.price}</div>
                     </Link>
