@@ -69,9 +69,16 @@ class CharList extends Component {
         this.itemRefs.forEach(item => item.classList.remove('char__item_selected'));
         this.itemRefs[id].classList.add('char__item_selected');
         this.itemRefs[id].focus();
+<<<<<<< HEAD:practice/React/marvel_starter/src/components/charList/CharList.js
+    }
+
+    // Этот метод создан для оптимизации, 
+    // чтобы не помещать такую конструкцию в метод render
+=======
         console.log(this.itemRefs);
     }
 
+>>>>>>> 6af60bea03b12ca850d2136d27d377eeb28fde9b:practice/React/marvel_classes/src/components/charList/CharList.js
     renderItems(arr) {
         const imgNotFound = 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg';
         const items = arr.map((item, i) => {
@@ -81,6 +88,19 @@ class CharList extends Component {
                     tabIndex={0}
                     ref={this.setRef}
                     key={item.id}
+<<<<<<< HEAD:practice/React/marvel_starter/src/components/charList/CharList.js
+                    onClick={() => {
+                        this.props.onCharSelected(item.id);
+                        this.focusOnTime(i);
+                    }}
+                    onKeyPress={(e) => {
+                        if (e.key === ' ' || e.key === "Enter") {
+                            this.props.onCharSelected(item.id);
+                            this.focusOnItem(i);
+                        }
+                    }}
+                >
+=======
                     onClick={() => { 
                         this.props.onCharSelected(item.id);
                         this.focusOnItem(i)
@@ -91,6 +111,7 @@ class CharList extends Component {
                             this.focusOnItem(i);
                         }
                     }}>                    
+>>>>>>> 6af60bea03b12ca850d2136d27d377eeb28fde9b:practice/React/marvel_classes/src/components/charList/CharList.js
                     <img
                         src={item.thumbnail}
                         alt={item.name}
@@ -136,7 +157,7 @@ class CharList extends Component {
 }
 
 CharList.propTypes = {
-    onCharSelected: PropTypes.func
+    onCharSelected: PropTypes.func.isRequired
 }
 
 export default CharList;
