@@ -6,6 +6,7 @@ import './App.css';
 import Form from './components/formUseContext/Form';
 import dataContext from './components/formUseContext/context';
 import SliderUseReducer from './components/hookUseReducer/HookUseReducer';
+import HigherOrderComponent from './components/higherOrderComponent/HigherOrderComponent'
 
 const { Provider } = dataContext;
 
@@ -194,7 +195,8 @@ function App() {
 
     return (
         <>
-            <SliderUseReducer initial={false} />
+            <HigherOrderComponent/>
+            {/* <SliderUseReducer initial={false} />
             <Provider value={data}>
                 <Form text={data.text} />
                 <button
@@ -204,7 +206,7 @@ function App() {
                     })}>
                     Click me
                 </button>
-            </Provider>
+            </Provider> */}
             {/* {slider ? <Slider /> : null} */}
         </>
     );
