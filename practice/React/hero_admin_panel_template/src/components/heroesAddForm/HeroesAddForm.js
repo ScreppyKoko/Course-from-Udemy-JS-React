@@ -91,7 +91,7 @@ const HeroesAddForm = () => {
             <div className="mb-3">
                 <label htmlFor="element" className="form-label">Выбрать элемент героя</label>
                 <select
-                    required
+                    // required
                     className="form-select"
                     id="element"
                     name="element"
