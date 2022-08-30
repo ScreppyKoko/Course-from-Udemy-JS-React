@@ -1,28 +1,35 @@
 
 const HeroesListItem = ({ name, description, element, onDelete }) => {
-
-    let elementClassName;
-
-    switch (element) {
-        case 'fire':
-            elementClassName = 'bg-danger bg-gradient';
-            break;
-        case 'water':
-            elementClassName = 'bg-primary bg-gradient';
-            break;
-        case 'wind':
-            elementClassName = 'bg-success bg-gradient';
-            break;
-        case 'earth':
-            elementClassName = 'bg-secondary bg-gradient';
-            break;
-        default:
-            elementClassName = 'bg-warning bg-gradient';
+    
+    const test = {
+        'fire': 'bg-danger bg-gradient',
+        'water': 'bg-primary bg-gradient',
+        'wind': 'bg-success bg-gradient',
+        'earth': 'bg-secondary bg-gradient',
     }
+
+    // let elementClassName;
+
+    // switch (element) {
+    //     case 'fire':
+    //         elementClassName = 'bg-danger bg-gradient';
+    //         break;
+    //     case 'water':
+    //         elementClassName = 'bg-primary bg-gradient';
+    //         break;
+    //     case 'wind':
+    //         elementClassName = 'bg-success bg-gradient';
+    //         break;
+    //     case 'earth':
+    //         elementClassName = 'bg-secondary bg-gradient';
+    //         break;
+    //     default:
+    //         elementClassName = 'bg-warning bg-gradient';
+    // }
 
     return (
         <li
-            className={`card flex-row mb-4 shadow-lg text-white ${elementClassName}`}>
+            className={`card flex-row mb-4 shadow-lg text-white ${test[element]}`}>
             <img src="http://www.stpaulsteinbach.org/wp-content/uploads/2014/09/unknown-hero.jpg"
                 className="img-fluid w-25 d-inline"
                 alt="unknown hero"
